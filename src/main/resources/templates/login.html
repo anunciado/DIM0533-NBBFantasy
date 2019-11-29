@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>NBB Fantasy</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Bem-vindo de volta ao NBB Fantasy!</h1>
+                    <h4 class="h6 text-gray-900 mb-4">Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis! Delegadis gente finis, bibendum egestas augue arcu ut est. Atirei o pau no gatis, per gatis num morreus. Sapien in monti palavris qui num significa nadis i pareci latim.</h4>
+                  </div>
+
+                  <form th:action="@{/login}" method="post">
+          					<div th:if="${param.error}">
+          						<div class="alert alert-danger">Nome de usuário ou senha inválidos.</div>
+          					</div>
+          					<div th:if="${param.logout}">
+          						<div class="alert alert-info">Você foi desconectado.</div>
+          					</div>
+          					<div class="center form-group">
+          						<label for="username"> <input type="text"
+          							id="username" name="username" class="form-control"
+          							autofocus="autofocus" placeholder="E-mail" size="35" />
+          					</div>
+          					<div class="center form-group">
+          						<label for="password"> <input type="password"
+          							id="password" name="password" class="form-control"
+          							placeholder="Senha" size="35"/>
+          					</div>
+										<div class="form-group">
+          						<input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-primary center" value="Login" />
+          					</div>
+          				</form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="small" href="/" th:href="@{/registration}">Criar uma conta!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
